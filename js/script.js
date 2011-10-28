@@ -85,7 +85,10 @@ var OWWMRITER = (function() {
 		if ( value == 'off' )
 		{
 			// disable keyboard sound.
-			this._backgroundSound.pause();
+			if ( this._backgroundSound )
+			{
+				this._backgroundSound.pause();
+			}
 			return;
 		}
 		
