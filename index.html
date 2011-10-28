@@ -1,0 +1,192 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>OWWMRITER</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/libs/modernizr-2.0.min.js"></script>
+	<script src="js/libs/respond.min.js"></script>
+</head>
+<body>
+<div id="container">
+	<div id="main" role="main">
+		<textarea name="owwmriter" id="canvas"></textarea>
+		<span id="toolbar-container">
+			<nav id="toolbar">
+				<ul>
+					<li class="oww-font-face oww-menu" data-menu="font-face">
+						<img src="images/icons/tipo.png" title="">
+						<ul>
+							<li data-value="standard" data-key="sans-serif" data-function="setFont" data-default>
+								<img src="images/icons/tipo1_.png" title="">
+							</li>
+							<li data-value="georgia" data-key="georgia" data-function="setFont">
+								<img src="images/icons/tipo2_.png" title="">
+							</li>
+							<li data-value="cygnet" data-key="cygnet" data-function="setFont">
+								<img src="images/icons/tipo3_.png" title="">
+							</li>
+							<li data-value="vera" data-key="vera" data-function="setFont">
+								<img src="images/icons/tipo4_.png" title="">
+							</li>
+						</ul>
+					</li>
+					<li class="oww-font-size oww-menu" data-menu="font-size">
+						<img src="images/icons/mida.png" title="">
+						<ul>
+							<li class="oww-font-size-choice" data-key="smallest" data-value="smallest" data-function="setFontSize" data-default>
+								<img src="images/icons/mida1_.png" title="">
+							</li>
+							<li class="oww-font-size-choice" data-key="small" data-value="small" data-function="setFontSize">
+								<img src="images/icons/mida2_.png" title="">
+							</li>
+							<li class="oww-font-size-choice" data-key="medium" data-value="medium" data-function="setFontSize">
+								<img src="images/icons/mida3_.png" title="">
+							</li>
+							<li class="oww-font-size-choice" data-key="big" data-value="big" data-function="setFontSize">
+								<img src="images/icons/mida4_.png" title="">
+							</li>
+						</ul>
+					</li>
+					<li class="oww-background-image oww-menu" data-menu="background-image">
+						<img src="images/icons/colors.png" title="">
+						<ul>
+							<li class="oww-font-size-choice" data-key="paisaje" data-value="paisaje_1920x1200.jpg" data-function="setBackground" data-default>
+								<img src="images/icons/colors1_.png" title="">
+							</li>
+							<li class="oww-font-size-choice" data-key="white" data-value="background_white.jpg" data-function="setBackground">
+								<img src="images/icons/colors2_.png" title="">
+							</li>
+							<li class="oww-font-size-choice" data-key="textura_oscuro" data-value="textura_oscuro_1920x1200.jpg" data-function="setBackground">
+								<img src="images/icons/colors3_.png" title="">
+							</li>
+							<li class="oww-font-size-choice" data-key="luces" data-value="luces_1920x1200.jpg" data-function="setBackground">
+								<img src="images/icons/colors4_.png" title="">
+							</li>
+							<li class="oww-font-size-choice" data-key="pared" data-value="pared_1920x1200.jpg" data-function="setBackground">
+								<img src="images/icons/colors5_.png" title="">
+							</li>
+							<li class="oww-font-size-choice" data-key="paisaje_azul" data-value="paisaje_azul_1920x1200.jpg" data-function="setBackground">
+								<img src="images/icons/colors6_.png" title="">
+							</li>
+							<!--
+							<li class="oww-font-size-choice" data-value="purple.png" data-function="setBackground">
+								<img src="images/icons/colors7_.png" title="">
+							</li>
+							<li class="oww-font-size-choice" data-value="purplegreen.png" data-function="setBackground">
+								<img src="images/icons/colors8_.png" title="">
+							</li>
+							-->
+						</ul>
+					</li>
+					<li class="oww-background-sound oww-menu" data-menu="background-sound">
+						<img src="images/icons/musica.png" title="">
+						<ul>
+							<li class="oww-background-sound" data-key="trip" data-value="1|trip_128" data-function="setBackgroundSound" data-default>
+								<img src="images/icons/s1_.png" class="small" title="">
+							</li>
+							<li class="oww-background-sound" data-key="bowls" data-value="1|bowls_192" data-function="setBackgroundSound">
+								<img src="images/icons/s2_.png" class="small" title="">
+							</li>
+							<li class="oww-background-sound" data-key="hans" data-value="1|hans_128" data-function="setBackgroundSound">
+								<img src="images/icons/s3_.png" class="small" title="">
+							</li>
+							<li class="oww-background-sound" data-key="nocturn" data-value="1|nocturn_128" data-function="setBackgroundSound">
+								<img src="images/icons/s4_.png" class="small" title="">
+							</li>
+							<li class="oww-background-sound" data-key="alga" data-value="1|alga_128" data-function="setBackgroundSound">
+								<img src="images/icons/s5_.png" class="small" title="">
+							</li>
+							<li class="oww-background-sound" data-key="biblio" data-value="1|biblio_128" data-function="setBackgroundSound">
+								<img src="images/icons/s6_.png" class="small" title="">
+							</li>
+							<li class="oww-background-sound" data-key="corazon" data-value="1|corazon_128" data-function="setBackgroundSound">
+								<img src="images/icons/s7_.png" class="small" title="">
+							</li>
+							<li class="oww-background-sound" data-key="off" data-value="off" data-function="setBackgroundSound">
+								<img src="images/icons/musicOff_.png" title="">
+							</li>
+						</ul>
+					</li>
+					<li class="oww-keyboard-sound oww-menu" data-menu="keyboard-sound">
+						<img src="images/icons/soOn.png" title="">
+						<ul>
+							<li class="oww-keyboard-sound" data-key="sound1" data-value="0.15|t1_omm1,t2_omm1,t3_omm1,t4_omm1,t5_omm1,t6_omm1,t7_omm1" data-function="setKeyboardSound" data-default>
+								<img src="images/icons/s1_.png" class="small" title="">
+							</li>
+							<li class="oww-keyboard-sound" data-key="sound2" data-value="0.3|t1_omm2,t2_omm2,t3_omm2,t4_omm2,t5_omm2,t6_omm2,t7_omm2" data-function="setKeyboardSound">
+								<img src="images/icons/s2_.png" class="small" title="">
+							</li>
+							<li class="oww-keyboard-sound" data-key="sound3" data-value="0.3|t1_omm3,t2_omm3,t3_omm3,t4_omm3,t5_omm3,t6_omm3,t7_omm3" data-function="setKeyboardSound">
+								<img src="images/icons/s3_.png" class="small" title="">
+							</li>
+							<li class="oww-keyboard-sound" data-key="sound4" data-value="0.4|t1_omm4,t2_omm4,t3_omm4,t4_omm4,t5_omm4,t6_omm4,t7_omm4" data-function="setKeyboardSound">
+								<img src="images/icons/s4_.png" class="small" title="">
+							</li>
+							<li class="oww-keyboard-sound" data-key="sound5" data-value="0.25|tecla_5_1,tecla_5_2,tecla_5_3,tecla_5_4,tecla_5_5" data-function="setKeyboardSound">
+								<img src="images/icons/s5_.png" class="small" title="">
+							</li>
+							<li class="oww-keyboard-sound" data-key="sound6" data-value="0.3|tecla_6_1,tecla_6_2,tecla_6_3,tecla_6_4,tecla_6_5" data-function="setKeyboardSound">
+								<img src="images/icons/s6_.png" class="small" title="">
+							</li>
+							<li class="oww-keyboard-sound" data-key="sound7" data-value="0.33|tecla_7_1,tecla_7_2,tecla_7_3,tecla_7_4,tecla_7_5" data-function="setKeyboardSound">
+								<img src="images/icons/s7_.png" class="small" title="">
+							</li>
+							<li class="oww-keyboard-sound" data-key="off" data-value="off" data-function="setKeyboardSound">
+								<img src="images/icons/keyboardOff_.png" title="">
+							</li>
+						</ul>
+					</li>
+					<li class="oww-utilities oww-menu" data-menu="utilities">
+						<img src="images/icons/guardar.png" title="">
+						<ul>
+							<li class="oww-utility" data-value="save" data-function="save">
+								<img src="images/icons/guardar2_.png" title="">
+							</li>
+							<li class="oww-utility" data-value="saveas" data-function="saveas">
+								<img src="images/icons/guardarComo_.png" title="">
+							</li>
+							<li class="oww-utility" data-value="open" data-function="open">
+								<img src="images/icons/abrir_.png" title="">
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</span>
+		<div id="wordcount"></div>
+	</div>
+	
+	<!--<footer>
+		OWWMRITER is not endorsed or affiliated with Herraiz Soto &amp; Co, original creators of Ommwriter. Please note that this is just a fun remake of the amazing application Ommwriter, to test what can be accomplished with modern web technologies. If you like it, buy the real Ommwriter OS X or iPad app from <a href="http://www.ommwriter.com/">Ommwriter</a>. You'll love it even more than this!
+	</footer>-->
+</div> <!--! end of #container -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+<!-- scripts concatenated and minified via ant build script-->
+<script src="js/libs/sticky.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/script.js"></script>
+<!-- end scripts-->
+
+
+<!--[if lt IE 7 ]>
+	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+<![endif]-->
+
+</body>
+</html>
