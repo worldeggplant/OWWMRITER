@@ -6,17 +6,21 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
+	
 	<title>OWWMRITER</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
-
+	
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-
+	
 	<link rel="stylesheet" href="css/style.css">
-
-	<script src="js/libs/modernizr-2.0.min.js"></script>
-	<script src="js/libs/respond.min.js"></script>
+	<link rel="icon" type="image/vnd.microsoft.icon" href="/owwmriter/favicon.ico">
+	<link rel="shortcut icon" href="/owwmriter/favicon.ico"/>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/script.js"></script>
 </head>
 <body>
 <div id="container">
@@ -170,12 +174,37 @@
 	
 </div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 
-<script src="js/libs/sticky.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/script.js"></script>
+<div style="display:none;">
+	<div id="simplenote-login">
+		<h3>Log in to your SimpleNote account</h3>
+		<form action="#" method="get" id="simplenote-login-form">
+		<p><input type="text" name="email" placeholder="email"> <input type="password" name="password" placeholder="password"> <input type="submit" id="simplenote-login-action" value="Log in" /></p>
+		</form>
+	</div>
+</div>
+
+<div style="display:none;">
+	<div id="simplenote-list">
+		<h3>Choose your note</h3>
+		<ul id="simplenote-list-notes">
+			<li class="loading">Loading...</li>
+		</ul>
+		
+		<a href="#" id="simplenote-create-new">New note</a> - <a href="#" id="simplenote-list-refresh">refresh</a>
+	</div>
+</div>
+
+<div style="display:none;">
+	<div id="simplenote-list-open">
+		<h3>Choose your note</h3>
+		<ul id="simplenote-list-open-notes">
+			<li class="loading">Loading...</li>
+		</ul>
+		
+		<a href="#" id="simplenote-list-open-refresh">refresh</a>
+	</div>
+</div>
 
 <!--[if lt IE 7 ]>
 	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>

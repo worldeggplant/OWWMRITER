@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table xmlns="http://query.yahooapis.com/v1/schema/table.xsd" https="true">
+  <meta>
+    <author>Carlo Zottmann</author>
+    <description>Proxy SimpleNote requests</description>
+    <sampleQuery><![CDATA[
+      SELECT * FROM {table} WHERE
+      path='/login'
+      AND data="[base64-encoded request parameters]"
+      AND method='[get/post]'
+    ]]></sampleQuery>
+    <documentationURL></documentationURL>
+  </meta>
+  <bindings>
+    <select itemPath="" produces="JSON">
+      <urls>
+        <url>{url}</url>
+      </urls>
+      <inputs>
+        <key id="method" type="xs:string" default="get" paramType="variable"/>
+        <key id="path" type="xs:string" required="true" paramType="variable"/>
+        <key id="data" type="xs:string" required="true" paramType="variable"/>
+      </inputs>
+      <execute>
+        <![CDATA[
+          var snRequest,
+            snData;
+          
+          if ( method === "post" ) {
+            snRequest = y.rest( "https://simple-note.appspot.com/api" + path );
+            snData = snRequest
+              .timeout( 5000 )
+              .accept( "text/plain, application/json" )
+              .contentType( "application/x-www-form-urlencoded" )
+              .post( data );
+          }        
+          else {
+            snRequest = y.rest( "https://simple-note.appspot.com/api" + path + "?" + data );
+            snData = snRequest
+              .timeout( 5000 )
+              .accept( "text/plain, application/json" )
+              .contentType( "application/x-www-form-urlencoded" )
+              .get();
+          }
+          
+          response.object = {
+            "response": ( path === "/search" ) ? y.xmlToJson( snData.response ) : snData.response,
+            "headers": snData.headers,
+            "status": snData.status
+          };
+
+        ]]>
+      </execute>
+    </select>
+  </bindings>
+</table>
